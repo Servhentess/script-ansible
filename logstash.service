@@ -1,0 +1,14 @@
+[Service]
+Type=simple
+User=logstash
+Group=logstash
+
+EnvironmentFile=-/etc/default/logstash
+EnvironmentFile=-/etc/sysconfig/logstash
+EnvironmentFile=-/etc/logstash/startup.options
+ExecStart=/usr/share/logstash/bin/logstash "--path.settings" "/etc/logstash"
+Restart=always
+WorkingDirectory=/
+
+[Install]
+WantedBy=multi-user.target

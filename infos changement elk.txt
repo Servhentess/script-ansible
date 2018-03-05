@@ -1,0 +1,11 @@
+Elasticsearch
+a changer : (path /etc/elasticsearch/jvm.options)
+-Xms1g 		par	-Xms512m
+-Xmx1g		par	-Xmx512m
+
+a changer : (path /etc/elasticsearch/elasticsearch.yml)
+#network.host: 192.168.0.1	par	network.host: localhost
+
+Logstash
+a changer : (path /etc/logstash/jvm.options)
+-Xmx1g		par	-Xmx256m

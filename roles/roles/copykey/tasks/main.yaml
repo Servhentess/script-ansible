@@ -1,0 +1,9 @@
+---
+- name: Copy public key
+  authorized_key:
+    user: httpd-user
+    state: present
+    key: '{{ item }}'
+    exclusive: True
+  with_file:
+    - '~/.ssh/id_rsa_httpd.pub'

@@ -1,0 +1,17 @@
+---
+- name: Create ssh pair
+  hosts: localhost
+  become: true
+
+  tasks:
+  - import_role:
+      name: generatessh
+
+- name: Test roles
+  hosts: all
+  become: true
+
+  roles:
+    - createusers
+    - httpd
+    - copykey

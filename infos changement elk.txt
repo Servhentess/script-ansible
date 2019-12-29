@@ -9,3 +9,5 @@ a changer : (path /etc/elasticsearch/elasticsearch.yml)
 Logstash
 a changer : (path /etc/logstash/jvm.options)
 -Xmx1g		par	-Xmx256m
+
+-
